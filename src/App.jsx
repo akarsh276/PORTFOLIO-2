@@ -2,21 +2,24 @@ import { useState, useEffect, useRef } from "react";
 
 const data = {
   name: "Akarsh Shukla",
-  title: "Computer Science Engineer",
-  tagline: "Fresher · Seeking Software & Web Development Roles",
+  title: "Aspiring Software Engineer · Salesforce Developer · Frontend Developer (React)",
+  tagline: "CSE Graduate (AKTU, 2026) · Open to Software Engineer, Salesforce Developer & Frontend Developer Roles",
   location: "Lucknow, Uttar Pradesh",
   email: "rajatshukla4493@gmail.com",
   phone: "+91-8181027176",
   linkedin: "linkedin.com/in/akarsh-shukla-4936b3274",
   github: "github.com/akarsh276",
   summary:
-    "Motivated Computer Science Engineering student with a strong foundation in frontend technologies, data structures, and core CS subjects. Proven ability to build responsive applications, solve algorithmic problems, and thrive in collaborative, agile environments. Passionate about building impactful software and continuously learning.",
+    "CSE graduate (AKTU, 2026) with a strong foundation in data structures, algorithms, OOP, and DBMS, backed by 200+ solved DSA problems. Focused on frontend development with React, building responsive and user-friendly interfaces. Also building hands-on proficiency in Salesforce development — Apex, SOQL, and Lightning Web Components — with 10+ Trailhead badges in Salesforce fundamentals and CRM concepts. A quick learner with a strong ability to pick up new tools and frameworks.",
   skills: {
+    Salesforce: ["Salesforce Fundamentals", "CRM Concepts", "Objects/Fields/Records", "Admin Basics", "Trailhead (10+ Badges)"],
+    "Currently Learning": ["Apex", "SOQL/SOSL", "Lightning Web Components", "Flows & Triggers"],
     Languages: ["C++", "Python", "JavaScript"],
-    Frontend: ["HTML5", "CSS3", "Responsive Design"],
+    Web: ["HTML5", "CSS3", "React", "Responsive Design"],
     Database: ["MySQL", "SQL"],
-    Tools: ["Git", "GitHub", "VS Code"],
     "CS Fundamentals": ["DSA", "OOP", "Operating Systems", "DBMS"],
+    "Tools & Practices": ["Git", "GitHub", "VS Code", "Agile/Scrum", "Debugging", "Testing"],
+    "Generative AI (Basic)": ["OpenAI API", "Prompt Engineering", "LLM Fundamentals", "RAG Pipelines"],
   },
   experience: [
     {
@@ -24,8 +27,8 @@ const data = {
       company: "AFAME Technologies",
       period: "Mar 2024 – Apr 2024",
       points: [
-        "Designed and implemented responsive web pages using HTML, CSS, and JavaScript.",
-        "Improved understanding of modern web standards and cross-browser compatibility.",
+        "Developed responsive web applications following software engineering best practices.",
+        "Assisted with testing, debugging, and cross-browser compatibility.",
       ],
     },
     {
@@ -33,31 +36,56 @@ const data = {
       company: "IBM",
       period: "Oct 2023",
       points: [
-        "Developed responsive, user-friendly interfaces using HTML, CSS, and JavaScript.",
-        "Worked with IBM Cognitive Technologies and AI cloud computing concepts.",
-        "Collaborated in agile teams, strengthening debugging and problem-solving skills.",
+        "Built and tested responsive web applications using HTML, CSS, and JavaScript within Agile teams.",
+        "Worked with IBM Cognitive Technologies and AI cloud concepts.",
       ],
     },
   ],
   projects: [
     {
-      name: "AI-Based Personalized Learning Assistant",
-      tech: ["NLP", "Python", "AI"],
-      desc: "Built an adaptive learning system using NLP-based content analysis. Dynamically generates summaries, quizzes, and contextual explanations tailored to the learner.",
-      link: "https://github.com/akarsh276",
+      name: "Coaching Session Management App",
+      tech: ["Salesforce", "Apex", "CRM Data Modeling"],
+      desc: "Record-based Salesforce app to create and manage coaching session data between users. Applies CRM-style data modeling, object/field design, and workflow handling aligned with Salesforce development practices.",
+      status: "In Progress",
     },
     {
-      name: "Restaurant Website",
-      tech: ["HTML", "CSS", "JavaScript"],
-      desc: "Created a fully responsive restaurant website with modern UI, menu sections, and seamless navigation across all devices.",
-      link: "https://github.com/akarsh276",
+      name: "Vilambo Research Paper Analyzer",
+      tech: ["Python", "LangGraph", "Streamlit", "Gemini API"],
+      desc: "Multi-agent AI system (boss agent + specialized sub-agents + review/iteration agent) built with LangGraph to analyze research papers, with a Streamlit UI for interactive use.",
+      github: "https://github.com/akarsh276/vilambo-research-analyzer",
+      live: "https://vilambo-research-analyzer.onrender.com/",
+    },
+    {
+      name: "RAG-Based PDF Q&A Assistant",
+      tech: ["Python", "Flask", "FAISS", "OpenAI/Gemini"],
+      desc: "Retrieval-Augmented Generation pipeline that lets users upload PDFs and get answers grounded strictly in document content, with source citations. Uses chunking, local Sentence-Transformers embeddings, and FAISS search.",
+      github: "https://github.com/akarsh276/rag-qa-assistant",
+    },
+    {
+      name: "AI-Based Personalized Learning Assistant",
+      tech: ["Python", "Flask", "MongoDB", "Gemini/Grok API", "OpenCV"],
+      desc: "Adaptive learning platform integrating Gemini/Grok APIs for quizzes, summaries, and recommendations; uses OpenCV for image processing, deployed on Render.",
+      github: "https://github.com/aditya6770/Learning-Assistant",
+      live: "https://learning-assistant-a7n9.onrender.com/",
+    },
+    {
+      name: "Simon Says",
+      tech: ["JavaScript", "HTML", "CSS"],
+      desc: "Browser-based Simon Says memory game with progressively challenging sequences and interactive feedback.",
+      github: "https://github.com/akarsh276/SSimon-Says",
+    },
+    {
+      name: "Band Kit",
+      tech: ["JavaScript", "HTML", "CSS"],
+      desc: "Virtual instrument/band-kit web app where users trigger sounds via keyboard or click.",
+      github: "https://github.com/akarsh276/BAND-KIT",
     },
   ],
   education: [
     {
       degree: "B.Tech – Computer Science Engineering",
       institute: "Shri Ramswaroop Memorial College of Engineering & Management, AKTU",
-      year: "Nov 2022 – Present",
+      year: "2022 – 2026",
     },
     {
       degree: "Intermediate (PCM)",
@@ -71,14 +99,18 @@ const data = {
     },
   ],
   certifications: [
+    "Machine Learning Basics – VOIS",
+    "IBM Cloud Essentials V3 – IBM",
     "Python 101 for Data Science – IBM",
-    "IBM Big Data Foundations",
-    "IBM Cloud Essentials V3",
-    "Introduction to Generative AI",
-    "Duet AI",
+    "Big Data Foundations – Level 1 – IBM",
+    "Deloitte Australia – Data Analytics Job Simulation (Forage)",
+    "Serverless Computing using Cloud Functions – Developer I – IBM",
+    "Introduction to Duet AI in Google Workspace – Google",
+    "Introduction to Generative AI – Google",
   ],
   achievements: [
-    "Academic Excellence Award (2024–2025)",
+    "Academic Excellence Award (2024, 2025, 2026)",
+    "Salesforce Trailhead: 10+ badges in Salesforce fundamentals and CRM concepts",
     "Solved 200+ DSA problems across coding platforms",
   ],
 };
@@ -161,6 +193,68 @@ function Tag({ label }) {
     >
       {label}
     </span>
+  );
+}
+
+function ResumeDropdown() {
+  const [open, setOpen] = useState(false);
+  const options = [
+    { label: "Frontend / SWE Resume", href: "./resume.pdf" },
+    { label: "Salesforce Developer Resume", href: "./resume-salesforce.pdf" },
+  ];
+  return (
+    <div
+      style={{ position: "relative" }}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        onClick={() => setOpen((o) => !o)}
+        style={{
+          padding: "13px 30px",
+          border: "1px solid #64ffda",
+          color: "#64ffda",
+          fontFamily: "'Space Mono', monospace",
+          fontSize: "0.75rem", letterSpacing: "0.1em",
+          background: "transparent", cursor: "pointer",
+          display: "inline-flex", alignItems: "center", gap: "6px",
+          transition: "background 0.2s",
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#64ffda18")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+      >
+        Resume {open ? "▲" : "▼"}
+      </button>
+      {open && (
+        <div
+          style={{
+            position: "absolute", top: "calc(100% + 6px)", left: 0,
+            background: "#0d1526", border: "1px solid #64ffda44",
+            minWidth: "220px", zIndex: 20,
+          }}
+        >
+          {options.map((opt) => (
+            <a
+              key={opt.href}
+              href={opt.href}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "block", padding: "12px 16px",
+                fontFamily: "'Space Mono', monospace",
+                fontSize: "0.72rem", color: "#c8d3e0",
+                borderBottom: "1px solid #ffffff0d",
+                transition: "background 0.15s, color 0.15s",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#64ffda18"; e.currentTarget.style.color = "#64ffda"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#c8d3e0"; }}
+            >
+              {opt.label} ↓
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -348,6 +442,7 @@ export default function App() {
             >
               Hire Me →
             </button>
+            <ResumeDropdown />
             <a
               href={`https://${data.github}`}
               target="_blank"
@@ -390,9 +485,9 @@ export default function App() {
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap" }}>
             {[
               { label: "Internships", value: "2" },
-              { label: "Projects", value: "2+" },
+              { label: "Projects", value: "6+" },
               { label: "DSA Problems", value: "200+" },
-              { label: "Certifications", value: "5" },
+              { label: "Certifications", value: "8" },
             ].map((s) => (
               <div key={s.label}>
                 <div
@@ -632,16 +727,6 @@ export default function App() {
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                   <span style={{ color: "#64ffda", fontSize: "1.6rem" }}>◈</span>
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: "#8892a4", fontSize: "1rem", transition: "color 0.2s" }}
-                    onMouseEnter={(e) => (e.target.style.color = "#64ffda")}
-                    onMouseLeave={(e) => (e.target.style.color = "#8892a4")}
-                  >
-                    ↗
-                  </a>
                 </div>
                 <h3
                   style={{
@@ -656,6 +741,42 @@ export default function App() {
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   {p.tech.map((t) => <Tag key={t} label={t} />)}
+                </div>
+                <div style={{ display: "flex", gap: "0.8rem", marginTop: "0.4rem" }}>
+                  {p.github && (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.72rem", color: "#8892a4",
+                        border: "1px solid #ffffff18", padding: "6px 12px",
+                        transition: "border-color 0.2s, color 0.2s",
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#64ffda44"; e.currentTarget.style.color = "#64ffda"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#ffffff18"; e.currentTarget.style.color = "#8892a4"; }}
+                    >
+                      GitHub ↗
+                    </a>
+                  )}
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.72rem", color: "#64ffda",
+                        border: "1px solid #64ffda44", padding: "6px 12px",
+                        transition: "background 0.2s",
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "#64ffda18")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -837,12 +958,14 @@ export default function App() {
                 { icon: "📞", label: "Phone", value: data.phone, href: `tel:${data.phone}` },
                 { icon: "💼", label: "LinkedIn", value: data.linkedin, href: `https://${data.linkedin}` },
                 { icon: "⌨", label: "GitHub", value: data.github, href: `https://${data.github}` },
+                { icon: "📄", label: "Resume", value: "Frontend / SWE (PDF)", href: "./resume.pdf" },
+                { icon: "📄", label: "Resume", value: "Salesforce Developer (PDF)", href: "./resume-salesforce.pdf" },
                 { icon: "📍", label: "Location", value: data.location, href: null },
               ].map((item) => (
                 <a
                   key={item.label}
                   href={item.href || undefined}
-                  target={item.href?.startsWith("http") ? "_blank" : undefined}
+                  target={item.href && item.href !== "null" ? "_blank" : undefined}
                   rel="noreferrer"
                   style={{
                     display: "flex", alignItems: "center", gap: "1.2rem",
